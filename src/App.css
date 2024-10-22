@@ -217,3 +217,16 @@ a {
 .post h2 a {
   color: #333; /* على سبيل المثال، لون رمادي */
 }
+input[type="text"] {
+  width: 300px; /* عرض شريط البحث */
+  padding: 10px; /* مساحة داخلية */
+  text-align: center; /* محاذاة النص في الوسط */
+  border: 1px solid #ccc; /* لون الحدود */
+  border-radius: 15px; /* حواف ناعمة */
+  outline: none; /* إزالة إطار التركيز */
+  transition: border-color 0.3s; /* تأثير الانتقال عند التركيز */
+}
+
+input[type="text"]:focus {
+  border-color: #007bff; /* تغيير لون الحدود عند التركيز */
+}
