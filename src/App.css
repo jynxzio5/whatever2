@@ -1,0 +1,209 @@
+/* إعدادات عامة */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s; /* انتقال سلس بين الألوان */
+}
+
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto; /* تمكين المركز */
+  padding: 20px; /* إضافة حشوة */
+}
+
+.night-mode {
+  background-color: #2c3e50; /* لون الخلفية لوضع الليل */
+  color: rgb(255, 255, 255); /* لون النص لوضع الليل (زيادة الوضوح) */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: white; /* تغيير لون العنوان إلى الأبيض لزيادة الوضوح في وضع الليل */
+  display: inline-block; /* عرض العنوان ككتلة متداخلة */
+}
+
+img {
+  width: 50px; /* عرض الشعار */
+  height: 50px; /* ارتفاع الشعار */
+  margin-right: 10px; /* إضافة مسافة بين الشعار والعنوان */
+  vertical-align: middle; /* محاذاة الشعار عموديًا مع النص */
+}
+
+p {
+  color: #ddd; /* تغيير لون النص في وضع الليل لزيادة الوضوح */
+  font-size: 1.1em; /* حجم خط أكبر */
+}
+
+.post-list {
+  margin: 20px 0;
+}
+
+.post {
+  background-color: #ffffff; /* لون الخلفية لكل منشور */
+  border: 1px solid #ddd; /* حدود خفيفة */
+  border-radius: 5px; /* زوايا دائرية */
+  padding: 15px; /* حشوة */
+  margin-bottom: 20px; /* مساحة بين المنشورات */
+  transition: box-shadow 0.3s, transform 0.3s; /* تأثير الظل وتغيير الحجم */
+}
+
+.night-mode .post {
+  background-color: #34495e; /* لون الخلفية لكل منشور في وضع الليل */
+}
+
+.night-mode .post h2 {
+  color: white; /* لون عنوان المنشور في وضع الليل */
+}
+
+.post:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل عند التحويم */
+  transform: scale(1.02); /* تأثير الزوم عند التحويم */
+}
+
+.post h2 {
+  font-size: 1.5em; /* حجم عنوان المنشور أكبر */
+}
+
+.post-date {
+  font-size: 0.9em; /* حجم خط أصغر */
+  color: #bbb; /* لون رمادي للنص التاريخي */
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #ddd; /* لون النص في الفوتر */
+}
+
+.toggle-button {
+  background: none; /* إزالة الخلفية */
+  border: none; /* إزالة الحدود */
+  cursor: pointer; /* تغيير المؤشر عند التحويم */
+  font-size: 24px; /* حجم الأيقونة */
+  color: inherit; /* استخدام لون النص الحالي */
+  margin-top: 10px; /* إضافة مسافة أعلى */
+}
+
+/* إضافة تأثير "Ripple" للزر */
+.ripple-button {
+  position: relative; /* تمكين التحكم في موضع العنصر */
+  overflow: hidden; /* إخفاء أي محتوى زائد */
+  background-color: #007bff; /* لون خلفية الزر */
+  color: white; /* لون النص */
+  border: none; /* إزالة الحدود الافتراضية */
+  border-radius: 5px; /* زوايا دائرية */
+  padding: 10px 20px; /* حشوة الزر */
+  cursor: pointer; /* تغيير المؤشر عند التحويم */
+  transition: background-color 0.3s; /* انتقال سلس لتغيير لون الخلفية */
+}
+
+.ripple-button:hover {
+  background-color: #0056b3; /* تغيير لون الخلفية عند التحويم */
+}
+
+/* تأثير "Ripple" */
+.ripple {
+  position: absolute; /* تمكين التحكم في موضع العنصر */
+  border-radius: 50%; /* زوايا دائرية */
+  background: rgba(255, 255, 255, 0.6); /* لون الخلفية */
+  transform: scale(0); /* بدء التأثير بحجم صغير */
+  animation: ripple-animation 0.6s linear; /* تشغيل الأنيميشن */
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4); /* تكبير العنصر */
+    opacity: 0; /* إخفاء العنصر */
+  }
+}
+
+.post-detail {
+  background-color: #34495e; /* لون الخلفية لوضع الليل */
+  color: white; /* لون النص لوضع الليل */
+  padding: 20px; /* حشوة داخلية */
+  border-radius: 5px; /* زوايا دائرية */
+  font-size: 1.2em; /* حجم خط أكبر في تفاصيل المنشور */
+}
+
+.post-detail button {
+  transition: color 0.3s; /* تأثير الانتقال عند التحويم */
+}
+
+.post-detail button:hover {
+  color: #ff0000; /* تغيير اللون عند التحويم */
+}
+
+/* استعلامات الوسائط لتحسين التصميم على الهواتف */
+@media (max-width: 600px) {
+  .blog-container {
+    padding: 10px; /* تقليل الحشوة في الهواتف */
+  }
+
+  h1 {
+    font-size: 1.8em; /* تقليل حجم العنوان في الهواتف */
+  }
+
+  .post h2 {
+    font-size: 1.4em; /* تقليل حجم عنوان المنشور في الهواتف */
+  }
+
+  p {
+    font-size: 1em; /* تقليل حجم النص في الهواتف */
+  }
+
+  .post {
+    padding: 10px; /* تقليل الحشوة في كل منشور */
+  }
+
+  footer {
+    font-size: 0.9em; /* تقليل حجم النص في الفوتر */
+  }
+
+  .toggle-button {
+    font-size: 20px; /* تقليل حجم أيقونة التبديل */
+  }
+
+  .close-button {
+    font-size: 20px; /* تقليل حجم زر الإغلاق */
+    margin-bottom: 10px; /* إضافة مساحة أسفل الزر */
+  }
+}
+/* نمط قائمة الهامبرغر */
+.mobile-menu {
+  display: flex; /* تغيير التنسيق إلى عمودي */
+  flex-direction: column; /* جعل العناصر في عمود */
+  position: absolute; /* جعل القائمة فوق المحتوى */
+  top: 60px; /* ارتفاع القائمة */
+  right: 0; /* وضع القائمة في الجانب الأيمن */
+  background-color: #333; /* تغيير لون الخلفية */
+  color: #fff; /* لون النص */
+  border: 1px solid #444; /* حدود للقائمة */
+  border-radius: 5px; /* زوايا دائرية */
+  padding: 10px; /* مساحة داخلية */
+  z-index: 1000; /* لضمان ظهور القائمة فوق العناصر الأخرى */
+}
+
+.mobile-menu ul {
+  list-style: none; /* إزالة النقاط من القائمة */
+  padding: 0; /* إزالة المساحة الداخلية */
+  margin: 0; /* إزالة المساحة الخارجية */
+}
+
+.mobile-menu li {
+  margin: 10px 0; /* مسافة بين العناصر */
+}
+
+.mobile-menu a {
+  color: #fff; /* لون النص في الروابط */
+  text-decoration: none; /* إزالة التسطير من الروابط */
+}
+
+.mobile-menu a:hover {
+  color: #ffcc00; /* تغيير اللون عند التحويم */
+}
