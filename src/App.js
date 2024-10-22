@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.png';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 const posts = [
     {
@@ -77,6 +79,14 @@ const posts = [
         `,
     },
 ];
+
+// كريدت لصانعي الموقع
+const Credit = () => (
+    <footer style={{ textAlign: 'center', marginTop: '40px', color: '#ddd' }}>
+        <p>&copy; 2024 جميع الحقوق محفوظة </p>
+        <p> المعصتم بالله | محمد الفطيمات</p>
+    </footer>
+);
 
 // مكون لصفحة تفاصيل الموضوع
 const PostDetail = ({ post, onClose }) => {
@@ -162,9 +172,7 @@ const App = () => {
                     ))}
                 </main>
 
-                <footer>
-                    <p>&copy; 2024 مدونة رؤى قانونية</p>
-                </footer>
+                <Credit /> {/* إضافة كريدت لصانعي الموقع */}
             </div>
         </Router>
     );
